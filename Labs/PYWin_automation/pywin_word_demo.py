@@ -7,13 +7,12 @@ def create_word_document(file_path):
     doc = word.Documents.Add()
 
     selection = word.Selection
-    selection.TypeText("Helllo word deocument")
+    selection.TypeText("Hello word document")
     selection.TypeParagraph()
-    selection.TypeText("Automation testing")
-
+    selection.TypeText("Automating work is fun!!")
 
     #save the document
     doc.SaveAs(file_path)
     #word.Quit()
 
-create_word_document(r"C:\Users\Administrator\Desktop\UST_Training\PYWin_automation\sampledemodoc.docx")
+create_word_document(r"C:\Users\Administrator\Desktop\UST_TRAINING\pywinAutomation\sample.docx")

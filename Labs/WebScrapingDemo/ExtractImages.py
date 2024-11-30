@@ -21,7 +21,7 @@ image_url = image_url['src']
 #print(image_url)
 
 img_data = requests.get(image_url).content
-img_path = "ExtractImg.jpg"
+img_path = "sample_image.jpg"
 
 with open(img_path, "wb") as img_file_handler:
     img_file_handler.write(img_data)

@@ -19,4 +19,4 @@ def create_presentation(file_path):
     print(f"Powerpoint save to {file_path}")
 
 #Example usage
-create_presentation(r"C:\Users\Administrator\Desktop\UST_TRAINING\PYWin_automation\sample.ppt")
+create_presentation(r"C:\Users\Administrator\Desktop\UST_TRAINING\pywinAutomation\sample.ppt")
