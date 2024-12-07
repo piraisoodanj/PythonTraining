@@ -1,22 +1,20 @@
 import win32com.client
 
-def create_presentation(file_path):
-    #Launch PowerPoint application
-    powerpoint = win32com.client.Dispatch("PowerPoint.Application")
-    powerpoint.Visible = True #Make PowerPoint visible (set to False to run in the background)
+def create_ppt(file_path):
 
-    #Create a new presentation
-    presentation = powerpoint.Presentations.Add()
+    powerpoint=win32com.client.Dispatch("PowerPoint.Application")
+    powerpoint.Visible=True
 
-    #Add as slide (ppLayoutTitle = 1)
-    slide = presentation.Slides.Add(1,1)
-    slide.Shapes[0].TextFrame.TextRange.Text = "Automating PowerPoint"
-    slide.Shapes[1].TextFrame.TextRange.Text = "Using PyWin32 for Automation"
+    #create a new Presentation
+    presentation=powerpoint.Presentation.Add()
+    #Add a slide (ppLayoutTitle=1)
+    slide=presentation.Slides.Add(1,1)
+    slide.Shapes[0].TextFrame.TextRange.Text="Automating PowerPoint"
+    slide.Shapes[1].TextFrame.TextRange.Text="Using PyWin32 for Automation"
 
-    #Save the presentation
+    #Save
     presentation.SaveAs(file_path)
-    powerpoint.Quit()
-    print(f"Powerpoint save to {file_path}")
+    #powerpoint.Quit()
+    print(f"Presentation saved to {file_path}")
 
-#Example usage
-create_presentation(r"C:\Users\Administrator\Desktop\UST_TRAINING\pywinAutomation\sample.ppt")
+create_ppt(r"C:\Users\Administrator\Downloads\Sample.pptx")
